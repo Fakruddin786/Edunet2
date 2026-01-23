@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body {
+            background: #f4f6fa;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            background: #fff;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 24px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #34495e;
+            font-weight: 500;
+        }
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background: #2980b9;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: #1c5980;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form method="post" action="">
+            {% csrf_token %}
+            <h1>Student Registration</h1>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="usn">USN</label>
+            <input type="text" name="usn" id="usn" required>
+
+            <label for="college">College</label>
+            <input type="text" name="college" id="college" required>
+
+            <label for="degree">Degree</label>
+            <input type="text" name="degree" id="degree" required>
+
+            <label for="branch">Branch</label>
+            <input type="text" name="branch" id="branch" required>
+
+            <label for="semester">Semester</label>
+            <input type="number" name="semester" id="semester" min="1" max="12" required>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <div class="form-container">
+        <form method="post" action="">
+            {% csrf_token %}
+            <h1>Professor Registration</h1>
+            <label for="prof_name">Name</label>
+            <input type="text" name="prof_name" id="prof_name" required>
+
+            <label for="prof_email">Email</label>
+            <input type="email" name="prof_email" id="prof_email" required>
+
+            <label for="prof_phone">Phone</label>
+            <input type="text" name="prof_phone" id="prof_phone" required>
+
+            <label for="prof_college">College</label>
+            <input type="text" name="prof_college" id="prof_college" required>
+
+            <label for="prof_department">Department</label>
+            <input type="text" name="prof_department" id="prof_department" required>
+
+            <label for="prof_qualification">Qualification</label>
+            <input type="text" name="prof_qualification" id="prof_qualification" required>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>

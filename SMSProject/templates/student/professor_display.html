@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professor Registration Details</title>
+    <style>
+        body { background: #f4f6fa; font-family: Arial, sans-serif; }
+        .container { background: #fff; max-width: 400px; margin: 40px auto; padding: 30px 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 24px; }
+        .field { margin-bottom: 12px; }
+        .label { font-weight: bold; color: #34495e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Professor Registered</h1>
+        <div class="field"><span class="label">Name:</span> {{ name }}</div>
+        <div class="field"><span class="label">Email:</span> {{ email }}</div>
+        <div class="field"><span class="label">Phone:</span> {{ phone }}</div>
+        <div class="field"><span class="label">College:</span> {{ collage }}</div>
+        <div class="field"><span class="label">Department:</span> {{ department }}</div>
+        <div class="field"><span class="label">Qualification:</span> {{ qualification }}</div>
+    </div>
+</body>
+</html>
